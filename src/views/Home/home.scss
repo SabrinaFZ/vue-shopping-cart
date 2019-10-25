@@ -1,0 +1,41 @@
+@import '../styles/responsive.scss';
+
+.products {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+
+    @include tablet {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    
+    @include desktop {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    
+    @include largeDesktop {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.filter {
+    padding-top: .5rem;
+
+    .filter__radio-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        @include tablet {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        
+        @include desktop {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        
+        @include largeDesktop {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
+}
