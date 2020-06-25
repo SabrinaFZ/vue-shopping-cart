@@ -1,41 +1,20 @@
-@import '../styles/responsive.scss';
+.filter {
+  padding-top: 0.5rem;
 
-.products {
+  &__radio-group {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    grid-template-columns: 1fr 1fr;
 
     @include tablet {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-    
+        
     @include desktop {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-    
+        
     @include largeDesktop {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-}
-
-.filter {
-    padding-top: .5rem;
-
-    .filter__radio-group {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-
-        @include tablet {
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-        }
-        
-        @include desktop {
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-        }
-        
-        @include largeDesktop {
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-        }
-    }
+  }
 }

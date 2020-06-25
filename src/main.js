@@ -1,31 +1,24 @@
-import '@babel/polyfill'
-import 'mutationobserver-shim'
-import Vue from 'vue'
-import * as rules from 'vee-validate/dist/rules'
-import { ValidationProvider } from 'vee-validate'
-import { ValidationObserver } from 'vee-validate'
-import { extend } from 'vee-validate'
-import en from 'vee-validate/dist/locale/en'
-import './plugins/axios'
-import './plugins/bootstrap-vue'
-import App from './App.vue'
-import router from './routes/router'
-import store from './store/store'
+import Vue from 'vue';
+import App from '@/views/App';
+import router from './router';
+import store from './store';
 
-Vue.component("ValidationProvider", ValidationProvider)
-Vue.component("ValidationObserver", ValidationObserver)
+// PLUGINS
+import './plugins/axios';
+import './plugins/bootstrap-vue';
 
-Vue.config.productionTip = false
+// STYLES
+import '@/styles/styles.scss';
 
-for (let rule in rules) {
-  extend(rule, {
-    ...rules[rule], 
-    message: en.messages[rule] 
-  });
-}
+// GLOBAL COMPONENTS
+import '@/setup/icons';
+import '@/setup/globalComponents';
+import '@/setup/validations';
+
+Vue.config.productionTip = false;
 
 new Vue({
   router,
   store,
   render: h => h(App)
-}).$mount('#app')
+}).$mount('#app');
