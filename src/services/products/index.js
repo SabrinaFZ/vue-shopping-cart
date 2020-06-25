@@ -1,5 +1,5 @@
-import * as get from './get';
+import get from './GET';
 
-export {
-    get
-}
+export default {
+  ...get
+};

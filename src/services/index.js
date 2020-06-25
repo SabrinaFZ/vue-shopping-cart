@@ -1,10 +1,7 @@
-import * as productsService from './products';
-import * as departmentsService from './departments';
-import URL from './urls';
+import products from './products';
+import departments from './departments';
 
-const services = {
-    [URL.PRODUCTS]: productsService,
-    [URL.DEPARTMENTS]: departmentsService
-}
-
-export default services
+export default {
+  ...products,
+  ...departments
+};

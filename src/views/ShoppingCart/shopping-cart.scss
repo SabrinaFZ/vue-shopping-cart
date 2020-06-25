@@ -1,79 +1,78 @@
-@import '../styles/responsive.scss';
-
 .shopping-cart {
+  display: grid;
+  grid-row-gap: 1rem;
+  grid-template-columns: 1fr;
+
+  @include tablet {
+    grid-column-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+  }
+        
+  @include desktop {
+    grid-column-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+  }
+    
+  @include largeDesktop {
+    grid-column-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .products {
     display: grid;
     grid-template-columns: 1fr;
-    grid-row-gap: 1rem;
-
+        
     @include tablet {
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 1rem;
+      grid-template-columns: 1fr 1fr;
     }
-        
-    @include desktop {
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 1rem;
-    }
-    
-    @include largeDesktop {
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 1rem;
-    }
-
-    .products {
-        display: grid;
-        grid-template-columns: 1fr;
-        
-        @include tablet {
-            grid-template-columns: 1fr 1fr;
-        }
             
-        @include desktop {
-            grid-template-columns: 1fr 1fr;
-        }
-        
-        @include largeDesktop {
-            grid-template-columns: 1fr 1fr;
-        }
+    @include desktop {
+      grid-template-columns: 1fr 1fr;
     }
+        
+    @include largeDesktop {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
 }
 
 .shopping-cart-resume {
-    & ul {
-        list-style: none;
-        padding: 0;
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
     }
-
-    .shopping-cart-resume__product {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-
-        @include tablet {
-            display: flex;
-            justify-content: space-between;
-        }
             
-        @include desktop {
-            display: flex;
-            justify-content: space-between;
-        }
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+    }
         
-        @include largeDesktop {
-            display: flex;
-            justify-content: space-between;
-        }
-
+    @include largeDesktop {
+      display: flex;
+      justify-content: space-between;
     }
 
-    .shopping-cart-resume__product-price{
-        justify-self: end;
-    }
+  }
 
-    .shopping-cart-resume__total {
-        text-align: right;
-    }
+  &__product-price {
+    justify-self: end;
+  }
+
+  &__total {
+    text-align: right;
+  }
     
-    .shopping-cart-resume__pay {
-        float: right;
-    }
+  &__pay {
+    float: right;
+  }
 }
