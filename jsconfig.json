@@ -9,7 +9,8 @@
   },
   "include": [
     "src/**/*",
-    "mocks/**/*"
+    "mocks/**/*",
+    "tests/**/*"
   ],
   "exclude": [
     "node_modules",
